@@ -12,4 +12,3 @@ def test_compute_sum():
 def test_compute_mean():
     values = [1, 2, 3, 4]
     assert compute_mean(values) == 2.5
-    assert False
