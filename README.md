@@ -12,8 +12,15 @@ The workflow is:
 Run the following commands to set up the Python environment.
 
 ```bash
-uv init
-uv run main.py
+uv sync
+```
+
+Then, a virtual environment `.venv` will be created, with all libraries in `pyproject.toml` installed.
+
+Everytime before running the code, make sure to activate the virtual environment:
+```bash
+source .venv/bin/activate
+python -V
 ```
 
 
@@ -36,4 +43,14 @@ Open `vis.ipynb` and run the cells to read `logs/mylog.txt` and plot results.
 ```bash
 source .venv/bin/activate
 py.test -s -vv
+```
+
+
+### Linter
+
+We use [black](https://github.com/psf/black) to format the code. 
+
+To formulate a python file `xxx.py`, run:
+```bash
+black xxx.py
 ```
