@@ -4,5 +4,3 @@ __all__ = [
     "compute_sum",
     "compute_mean",
 ]
-
-
