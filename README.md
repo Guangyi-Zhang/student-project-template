@@ -40,6 +40,10 @@ Open `vis.ipynb` and run the cells to read `logs/mylog.txt` and plot results.
 
 ### Generate a report
 
+*An alternative (and possibly better) way to generate a report using AI is to simply talk to Claude Code or Codex with the following:*
+
+> "Generate a Markdown report like reports/mylog_20260415_223139.md to reports/ folder by analyzing the results in the logs/mylog.txt file (filtered by ver=taskA-v2)."
+
 ```bash
 uv run python scripts/report.py --log logs/mylog.txt
 ```
