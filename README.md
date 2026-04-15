@@ -38,6 +38,26 @@ Each run appends a single JSON object per line to `logs/mylog.txt`.
 Open `vis.ipynb` and run the cells to read `logs/mylog.txt` and plot results.
 
 
+### Generate a report
+
+```bash
+uv run python scripts/report.py --log logs/mylog.txt
+```
+
+This writes a Markdown report to `reports/mylog_<timestamp>.md` with method rankings, a summary table, and auto-generated findings. Common options:
+
+| Option | Purpose |
+|---|---|
+| `--filter KEY=VALUE` | Filter records (repeatable), e.g. `--filter ver=taskA-v2` |
+| `--lower-is-better` | Reverse ranking direction |
+| `--title "My Report"` | Set report title |
+| `--findings "A;B"` | Override findings (semicolon-separated) |
+| `--conclusions "A;B"` | Override conclusions (semicolon-separated) |
+| `--output-dir DIR` | Output directory (default: `reports`) |
+
+Run `uv run python scripts/report.py --help` for the full list of options.
+
+
 ### Testing
 
 ```bash
